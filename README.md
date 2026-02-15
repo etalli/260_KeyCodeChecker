@@ -26,7 +26,7 @@ Electron を使わず、ブラウザで `index.html` を直接開いて確認で
 
 補足:
 
-- `i18n.js` / `constants.js` / `app.js` / `wpm.js` / `test.js` / `combo.js` / `init.js` を同じフォルダに置いたまま利用してください
+- `js/` フォルダ（`i18n.js` / `constants.js` / `app.js` / `wpm.js` / `test.js` / `combo.js` / `init.js`）を同じ構成のまま利用してください
 - ブラウザ利用時は `Electron グローバルショートカット` は利用できません（`window.electronAPI` がないため）
 - OS予約ショートカット（例: `Command+Shift+3`）はブラウザでは取得できない場合があります
 
@@ -67,15 +67,15 @@ npm start
 
 - `index.html`: UI
 - `styles.css`: スタイル定義
-- `i18n.js`: 多言語辞書
-- `constants.js`: キー配列/コンボ定義などの定数
-- `app.js`: フロントエンド共通ロジックと初期化関数
-- `wpm.js`: WPM計測ロジック
-- `combo.js`: コンボ判定ロジック
-- `test.js`: テストモード判定ロジック
-- `init.js`: 起動時の初期化実行
-- `main.js`: Electron メインプロセス
-- `preload.js`: Renderer との安全な橋渡し (IPC)
+- `js/i18n.js`: 多言語辞書
+- `js/constants.js`: キー配列/コンボ定義などの定数
+- `js/app.js`: フロントエンド共通ロジックと初期化関数
+- `js/wpm.js`: WPM計測ロジック
+- `js/combo.js`: コンボ判定ロジック
+- `js/test.js`: テストモード判定ロジック
+- `js/init.js`: 起動時の初期化実行
+- `js/main.js`: Electron メインプロセス
+- `js/preload.js`: Renderer との安全な橋渡し (IPC)
 - `package.json`: 起動スクリプトと依存定義
 
 ## 補足

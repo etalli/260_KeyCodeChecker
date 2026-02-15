@@ -2,7 +2,7 @@
   "name": "key-code-checker",
   "version": "1.0.0",
   "description": "Keyboard event and key combo checker built with Electron",
-  "main": "main.js",
+  "main": "js/main.js",
   "scripts": {
     "start": "electron ."
   },
