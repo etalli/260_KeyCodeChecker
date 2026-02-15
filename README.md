@@ -39,7 +39,7 @@ Electron を使わず、ブラウザで `index.html` を直接開いて確認で
 インストール:
 
 ```bash
-cd "/Users/k2/Library/CloudStorage/Dropbox/MyProjects/260_KeyCodeChecker"
+cd KeyCodeChecker
 npm install
 ```
 
