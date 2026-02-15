@@ -1,5 +1,7 @@
 # Key Code Checker
 
+[日本語](./README.md) | [English](./README.en.md)
+
 キーボード入力のイベント情報を確認できる Electron アプリです。  
 `event.key` / `event.code` / 修飾キー状態 / 履歴 / コンボ検出 / テスト機能をまとめて確認できます。
 
