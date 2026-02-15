@@ -16,6 +16,20 @@
   - シーケンステスト（指定コンボを順番に入力して PASS/MISS 判定）
   - 全キー入力テスト（`event.code` ベースの網羅率表示）
 
+## `index.html` の使い方
+
+Electron を使わず、ブラウザで `index.html` を直接開いて確認できます。
+
+1. `index.html` をブラウザで開く
+2. ページをアクティブにしてキー入力する
+3. 画面上のイベント値・履歴・WPM を確認する
+
+補足:
+
+- `i18n.js` / `constants.js` / `app.js` / `wpm.js` / `test.js` / `combo.js` / `init.js` を同じフォルダに置いたまま利用してください
+- ブラウザ利用時は `Electron グローバルショートカット` は利用できません（`window.electronAPI` がないため）
+- OS予約ショートカット（例: `Command+Shift+3`）はブラウザでは取得できない場合があります
+
 ## セットアップ
 
 前提:
@@ -51,7 +65,7 @@ npm start
 
 ## ファイル構成
 
-- `index.html`: UI マークアップ
+- `index.html`: UI
 - `styles.css`: スタイル定義
 - `i18n.js`: 多言語辞書
 - `constants.js`: キー配列/コンボ定義などの定数
