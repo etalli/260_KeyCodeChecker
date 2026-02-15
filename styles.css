@@ -1,0 +1,258 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0;
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #f3f7ff;
+  color: #1e293b;
+}
+
+main {
+  width: min(980px, 94vw);
+  max-height: calc(100vh - 24px);
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dbe4f1;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+#languageToggle {
+  border: 1px solid #c9d7eb;
+  background: #eef4ff;
+  color: #1e293b;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#languageToggle:hover {
+  background: #dce9ff;
+}
+
+p {
+  margin-top: 0;
+  color: #64748b;
+}
+
+.fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #f8fbff;
+  border: 1px solid #d6e2f2;
+}
+
+.label {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1.05rem;
+  color: #0f172a;
+  word-break: break-all;
+}
+
+#status {
+  margin-top: 12px;
+  color: #2563eb;
+}
+
+.combo {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fbff;
+  border: 1px solid #d6e2f2;
+}
+
+.combo p {
+  margin: 0 0 8px;
+}
+
+#comboList,
+#comboMatch {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.wpm {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fbff;
+  border: 1px solid #d6e2f2;
+}
+
+.wpm h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: #334155;
+}
+
+.wpm-row {
+  margin-bottom: 8px;
+  color: #475569;
+}
+
+.test {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fbff;
+  border: 1px solid #d6e2f2;
+}
+
+.test h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: #334155;
+}
+
+.test-row {
+  margin-bottom: 8px;
+  color: #475569;
+}
+
+.test-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.test-actions button {
+  border: 1px solid #c9d7eb;
+  background: #eef4ff;
+  color: #1e293b;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.test-actions button:hover {
+  background: #dce9ff;
+}
+
+#testLog {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 110px;
+  overflow: auto;
+}
+
+#testLog li {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  padding: 4px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.coverage {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fbff;
+  border: 1px solid #d6e2f2;
+}
+
+.coverage h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: #334155;
+}
+
+.coverage-row {
+  margin-bottom: 8px;
+  color: #475569;
+}
+
+#coverageMissing {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  overflow: auto;
+}
+
+#coverageMissing li {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.86rem;
+  padding: 3px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.history {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fbff;
+  border: 1px solid #d6e2f2;
+}
+
+.history h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #334155;
+}
+
+#historyList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 260px;
+  overflow: auto;
+}
+
+#historyList li {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  padding: 6px 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+@media (max-width: 760px) {
+  .fields-grid {
+    grid-template-columns: 1fr;
+  }
+}

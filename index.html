@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Code Checker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header-row">
+        <h1 id="appTitle">Keyboard Key Code Checker</h1>
+        <button id="languageToggle" type="button">English</button>
+      </div>
+      <p id="description">Press any key to display keyboard event details.</p>
+
+      <section class="fields-grid">
+        <div class="field"><div class="label">event.key</div><div id="key" class="value">-</div></div>
+        <div class="field"><div class="label">event.code</div><div id="code" class="value">-</div></div>
+        <div class="field"><div class="label">event.keyCode</div><div id="keyCode" class="value">-</div></div>
+        <div class="field"><div class="label">event.which</div><div id="which" class="value">-</div></div>
+        <div class="field"><div class="label">event.location</div><div id="location" class="value">-</div></div>
+        <div class="field"><div class="label">event.shiftKey</div><div id="shiftKey" class="value">false</div></div>
+        <div class="field"><div class="label">event.altKey</div><div id="altKey" class="value">false</div></div>
+        <div class="field"><div class="label">event.ctrlKey</div><div id="ctrlKey" class="value">false</div></div>
+        <div class="field"><div class="label" id="metaKeyLabel">event.metaKey (Command)</div><div id="metaKey" class="value">false</div></div>
+        <div class="field"><div class="label">CapsLock</div><div id="capsLock" class="value">false</div></div>
+        <div class="field"><div class="label">NumLock</div><div id="numLock" class="value">false</div></div>
+        <div class="field"><div class="label">Fn</div><div id="fnKey" class="value">false</div></div>
+        <div class="field"><div class="label" id="pressedKeysLabel">Pressed keys</div><div id="pressedKeys" class="value">-</div></div>
+      </section>
+
+      <div id="status"></div>
+
+      <section class="combo">
+        <p><span id="comboListLabel"></span>: <span id="comboList"></span></p>
+        <p><span id="comboMatchLabel"></span>: <span id="comboMatch"></span></p>
+        <p><span id="globalShortcutLabel"></span>: <span id="globalShortcutStatus"></span></p>
+      </section>
+
+      <section class="wpm">
+        <h2 id="wpmTitle"></h2>
+        <div class="test-actions">
+          <button id="wpmStartButton" type="button"></button>
+          <button id="wpmResetButton" type="button"></button>
+        </div>
+        <div class="wpm-row"><span id="wpmValueLabel"></span>: <span id="wpmValue"></span></div>
+        <div class="wpm-row"><span id="wpmCharsLabel"></span>: <span id="wpmChars"></span></div>
+        <div class="wpm-row"><span id="wpmElapsedLabel"></span>: <span id="wpmElapsed"></span></div>
+      </section>
+
+      <section class="test">
+        <h2 id="testTitle"></h2>
+        <div class="test-actions">
+          <button id="testStartButton" type="button"></button>
+          <button id="testResetButton" type="button"></button>
+        </div>
+        <div class="test-row"><span id="testTargetLabel"></span>: <span id="testTarget"></span></div>
+        <div class="test-row"><span id="testProgressLabel"></span>: <span id="testProgress"></span></div>
+        <ul id="testLog"></ul>
+      </section>
+
+      <section class="coverage">
+        <h2 id="coverageTitle"></h2>
+        <div class="test-actions">
+          <button id="coverageResetButton" type="button"></button>
+        </div>
+        <div class="coverage-row"><span id="coverageProgressLabel"></span>: <span id="coverageProgress"></span></div>
+        <ul id="coverageMissing"></ul>
+      </section>
+
+      <section class="history">
+        <h2 id="historyTitle"></h2>
+        <ul id="historyList"></ul>
+      </section>
+    </main>
+
+    <script src="./i18n.js"></script>
+    <script src="./constants.js"></script>
+    <script src="./app.js"></script>
+    <script src="./wpm.js"></script>
+    <script src="./test.js"></script>
+    <script src="./combo.js"></script>
+    <script src="./init.js"></script>
+  </body>
+</html>
