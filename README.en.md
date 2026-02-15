@@ -84,3 +84,7 @@ npm start
 
 - `Fn` and some system-reserved shortcuts may not be detectable depending on environment
 - `event.code` and key availability can differ by keyboard layout (JIS/US, etc.)
+
+## License
+
+[MIT License](./LICENSE)
